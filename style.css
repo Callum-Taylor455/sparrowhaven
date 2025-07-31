@@ -107,10 +107,26 @@ a{
     width: 100%;
 }
 
+#content img{
+    float: left;
+    width: 40%;
+    height: 400px;
+}
 
+.banner {
+    background-color: #f0f0f0; 
+  padding: 20px; 
+  border: 2px solid #ccc; 
+  border-radius: 10px; 
+  text-align: center; 
+  margin-bottom: 20px;
+}
 
-
-
+.banner h2{
+     color: #333; /* Darker text color for the heading */
+  font-size: 2em; /* Adjust font size as needed */
+  margin: 0;
+}
 /*========== Lists ==========*/
 
 ul.styled{
@@ -191,7 +207,8 @@ ul.styled li{
 /*========== Gallery ==========*/
 
 #gallery img{
-	width:120px;
+    height: 400px;
+	width: 400px;
 	margin:12px;
 	-moz-transition: -moz-transform 0.5s ease-in;
 	-webkit-transition: -webkit-transform 0.5s ease-in;
@@ -199,7 +216,7 @@ ul.styled li{
 }
 
 #gallery img:hover{
-	-moz-transform: scale(3);
-	-webkit-transform: scale(3);
-	-o-transform: scale(3);
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5);
  }
