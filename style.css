@@ -21,6 +21,7 @@ a{
 /*========== Menu ==========*/
 
 #menu{
+    width: 100%;
     background-color: red;
     height: 100px;
 }
@@ -57,6 +58,7 @@ a{
 /*========== Header ==========*/
 
 #header{
+    width: 100%;
     padding: 60px 0px 40px 0;
     background-color: #333333;
     text-align: center;
