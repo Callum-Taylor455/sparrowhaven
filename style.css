@@ -121,11 +121,13 @@ a{
   border-radius: 10px; 
   text-align: center; 
   margin-bottom: 20px;
+  
 }
 
 .banner-heading h2{
-     color: #333; /* Darker text color for the heading */
-  font-size: 2em; /* Adjust font size as needed */
+    font-weight: bold;
+     color: #333; /* Darker text color for the heading */    
+   font-size: 2em; /* Adjust font size as needed */
   margin: 0;
 }
 
@@ -214,7 +216,9 @@ ul.styled li{
 /*========== Gallery ==========*/
 
 #gallery img{
-    height: 600px;
-	width: 550px;
 	margin:12px;
+}
+
+#gallery h1{
+    text-align: center;
 }
