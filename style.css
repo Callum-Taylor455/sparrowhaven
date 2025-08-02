@@ -216,6 +216,8 @@ ul.styled li{
 /*========== Gallery ==========*/
 
 #gallery img{
+    width: 500px;
+    height: auto;
 	margin:12px;
 }
 
