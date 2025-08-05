@@ -177,26 +177,19 @@ ul.styled li{
     color: #adadad;
 }
 
-/*========== Footer boxes ==========*/
+/*========== Lists ==========*/
 
-#box1{
+#house-list{
+    margin: 10px;
     float: left;
-    width: 30%;
-    padding-right: 30px;
+    width: 45%;
 }
 
-#box2{
-    float: left;
-    width: 30%;
-    padding-right: 30px;
-}
-
-#box3{
+#flat-list{
+    margin: 10px;
     float: right;
-    width: 30%;
-    padding-left: 30px;
+    width: 45%;
 }
-
 /*========== Copyright ==========*/
 
 #copyright{
