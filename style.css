@@ -223,9 +223,9 @@ ul.styled li{
 /*========== Gallery ==========*/
 
 #gallery img{
-    width: 500px;
+    width: 400px;
     height: auto;
-	margin:12px;
+	margin: 15px;
 }
 
 #gallery h1{
