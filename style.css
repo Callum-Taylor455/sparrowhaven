@@ -190,6 +190,18 @@ ul.styled li{
     float: right;
     width: 45%;
 }
+
+#Booking{
+    margin: 10px;
+    float: left;
+    width: 50%;
+}
+
+#contacts{
+    margin: 10px;
+    float: left;
+    width: 50%;
+}
 /*========== Copyright ==========*/
 
 #copyright{
@@ -218,4 +230,11 @@ ul.styled li{
 
 #gallery h1{
     text-align: center;
+}
+
+#img-2 img{
+    float: right;
+    width: 45%;
+    height: 400px;
+    margin: 8px;
 }
