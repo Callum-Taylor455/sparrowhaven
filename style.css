@@ -18,6 +18,10 @@ a{
     color: teal;
 }
 
+h2{
+    text-align: center;
+}
+
 /*========== Menu ==========*/
 
 #menu{
@@ -235,7 +239,7 @@ ul.styled li{
 #img-2 img{
     float: right;
     width: 45%;
-    height: 400px;
+    height: auto;
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: 8px;
