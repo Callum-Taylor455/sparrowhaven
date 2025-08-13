@@ -155,31 +155,6 @@ ul.styled li{
     padding: 14px 0px;
 }
 
-/*========== Footer ==========*/
-
-#footer{
-    width: 100%;
-    height: 340px;
-    background-color: #1e1b1a;
-    padding-top: 25px;
-    padding-left: 22px;
-    clear: both;
-}
-
-#footer h2{
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-
-#footer p{
-    color: #adadad;
-}
-
-#footer a{
-    color: #adadad;
-}
 
 /*========== Lists ==========*/
 
