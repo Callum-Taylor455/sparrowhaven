@@ -332,3 +332,26 @@ ul.styled li{
   margin: 5px 0;
 }
 
+/*========== responsive-layout ==========*/
+
+/* Mobile Responsive Fixes */
+@media screen and (max-width: 768px) {
+  #Booking, #contacts, #house-list, #flat-list, #extras {
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  #content img {
+    float: none;
+    width: 100%;
+    height: auto;
+    margin: 12px 0;
+  }
+  
+  #img-2 img {
+    float: none;
+    width: 100%;
+    margin: 12px 0;
+  }
+}
