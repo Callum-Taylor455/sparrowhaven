@@ -22,6 +22,17 @@ h2{
     text-align: center;
 }
 
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Body text */
+body, p, li {
+  font-family: 'Raleway', sans-serif;
+}
+
+
 /*========== Menu ==========*/
 
 #menu{
@@ -83,12 +94,12 @@ h2{
 /*========== Banner ==========*/
 
 #banner{
-    height: 800px;
+    height: 900px;
 }
 
 #banner img{
     width: 100%;
-    height: 800px;
+    height: 900px;
 }
 
 /*========== Page ==========*/
@@ -181,6 +192,12 @@ ul.styled li{
     float: left;
     width: 50%;
 }
+
+#extras{
+  margin: 10px;
+    float: left;
+    width: 45%;
+}
 /*========== Copyright ==========*/
 
 #copyright{
@@ -220,3 +237,98 @@ ul.styled li{
     margin-right: 8px;
     margin-left: 5px;
 }
+
+/* Review Section */
+
+#reviews-section {
+  clear: both;   
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+#reviews-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.review-form button {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.review-form button:hover {
+  background: #218838;
+}
+
+/* Stars input for form */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
+
+/* Reviews display */
+.reviews {
+  margin-top: 20px;
+}
+
+.review {
+  background: #f1f1f1;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.review strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.review small {
+  color: gray;
+  font-size: 12px;
+}
+
+.stars-display {
+  color: gold;
+  font-size: 18px;
+  margin: 5px 0;
+}
+

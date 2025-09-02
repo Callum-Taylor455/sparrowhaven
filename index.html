@@ -3,6 +3,9 @@
     <head>
         <title>Sparrow Haven</title>
         <link rel="stylesheet" href="style.css" />
+        <form id="reviewForm" action="submit_review.php" method="POST"></form>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
     </head>
 
     <body>
@@ -18,7 +21,7 @@
        </div>
 
        <div id="banner">
-        <img src="images/house2.jpeg"/>
+        <img src="images/Banner_2.JPG"/>
        </div>
 
        <div id="page">
@@ -36,7 +39,7 @@
               families or friends looking for an unforgettable bush experience.</p>
               </div>
 
-              <br/><br/><br/>
+              <br/><br/><br/><br/>
 
               <h2><b> Accommodation features: </b></h2>
               <p> Both the house and flat each have their own braai areas, fans and aircons, braai grids and potjie pot, hot tray, fridge/freezer, 
@@ -48,7 +51,7 @@
              <div id="house-list">
               <h1>The House:</h1>
               <ul>
-                <li><b>2 Bedrooms:</b> A queen bed and a double bed, both have an ensuite bathroom.</li>
+                <li><b>2 Bedrooms:</b> A queen bed and 2 single beds, both have an ensuite bathroom.</li>
                 <li><b>Guest toilet</b> </li>
                 <li><b>Aircons & fans:</b> Stay cool and comfortable in the warm weather.</li>
                 <li><b>Kitchen:</b>  Fully equipped with everything you need in a kitchen.</li>
@@ -62,13 +65,12 @@
              <div id="flat-list">
              <h1>The Flat:</h1>
              <ul>
-                <li><b>1 Bedroom:</b> Two single beds.</li>
+                <li><b>1 Bedroom:</b> 1 double bed.</li>
                 <li><b>1 Bathroom:</b> Consists of a bath, shower and toilet.</li>
                 <li><b>Aircons & fans:</b> Stay cool and comfortable.</li>
                 <li><b>Kitchen:</b> Fully equipped with everything you need.</li>
                 <li><b>Braai Area:</b> Enjoy outdoor cooking and relaxation.</li>
                 <li><b>Smart TV:</b> Enjoy your favorite shows and movies.</li>
-                <li><b>Jacuzzi:</b> Relax in our cold water jacuzzi.</li>
                 <li><b>Board Games:</b> Have fun and bond with family and friends</li>
                 <li><b>Free Wi-Fi:</b> Stay connected with our reliable internet.</li>
               </ul>
@@ -77,7 +79,7 @@
 
         <br/><br/><br/>
 
-        <h2><b>Travelling from far?</b></h2>
+        <h1><b>Travelling from far?</b></h1>
           <p>Save space and pre-order your wood, charcoal, firelighters and ice from us.  We will have it ready for you when you arrive.</p>
 
           <br/>
@@ -90,6 +92,24 @@
 
           <br/>
 
+          <div id="extras">
+          <h1>Things to do:</h1>
+          <ul>
+            <li>Kruger Park Trips</li>
+            <li>Sundowner drives to the river in Marloth</li>
+            <li>Go-karting</li>
+            <li>Lionspruit drives in Marloth</li>
+            <li>Water world</li>
+            <li>Cycling</li>
+          </ul>
+        </div>
+
+        <div id="img-2">
+          <img src="images/zebra.JPG"/>
+        </div>
+
+        <br/>
+
         <div id="Booking">
           <h1>Booking Options:</h1>
           <ul>
@@ -98,19 +118,45 @@
           </ul>
         </div>
 
-        <div id="img-2">
-          <img src="images/impala-1.jpeg"/>
-        </div>
-
+        <br/>
+        
         <div id="contacts">
           <h1>Contact Us:</h1>
           <p>Get in touch with us for your next holiday trip</p>
           
           <h3>Alex Tapson:</h3>
           <p><b>Cell Number:</b> 079 754 9911</p>
-          <p><b>Email Address:</b> alex.tapson@gmail.com</p>
-           
-          <br/>
+          <p><b>Email Address:</b> alex.tapson@gmail.com</p> 
+        </div>
+
+          <br/><br/>
+
+                          <!-- ✅ REVIEW SECTION ADDED HERE -->
+        <div id="reviews-section">
+          <h1>Customer Reviews</h1>
+          <form class="review-form" action="submit_review.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea name="message" rows="4" placeholder="Write your review..." required></textarea>
+
+            <!-- Star Rating -->
+            <div class="stars">
+              <input type="radio" id="star5" name="rating" value="5" checked><label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+
+            <button type="submit">Submit Review</button>
+          </form>
+
+          <div class="reviews" id="reviews">
+            <!-- Reviews will load here via get_reviews.php -->
+          </div>
+        </div>
+        <!-- ✅ END REVIEW SECTION -->
+
+        <br/>
 
           <h3>Follow us on our socials:</h3>
           <a href="https://www.facebook.com/profile.php?id=61577727696444"><img src="images/facebook.png" height="60"/></a>
@@ -128,5 +174,35 @@
        <div id="copyright">
         <p>&copy; All Rights Reserved  |  Designed By Callum Taylor</p>
        </div>
+
+        <script>
+        function getStars(rating) {
+          let stars = "";
+          for (let i = 1; i <= 5; i++) {
+            stars += i <= rating ? "★" : "☆";
+          }
+          return stars;
+        }
+
+        async function loadReviews() {
+  const response = await fetch('get_reviews.php');
+  const reviews = await response.json();
+  const reviewsDiv = document.getElementById('reviews');
+  reviewsDiv.innerHTML = "";
+
+  reviews.forEach(r => {
+    const div = document.createElement('div');
+    div.classList.add('review');
+    div.innerHTML = `<strong>${r.name}</strong>
+                     <p>${r.review}</p>
+                     <div class="stars-display">${getStars(parseInt(r.rating))}</div>
+                     <small>${r.created_at}</small>`;
+    reviewsDiv.appendChild(div);
+  });
+}
+
+        loadReviews();
+        
+      </script>
     </body>
 </html>
